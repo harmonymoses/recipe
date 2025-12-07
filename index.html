@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yam Porridge Recipe</title>
+    <link href="./assets/style.css" rel="stylesheet"/>
 </head>
 <body>
     <!--========Header Section========-->
-<header>
-    <h2>Tasty Yam Porridge Recipe</h2>
-    <p><strong>Yam porridge</strong> also called <em>Asaro</em> is a delicious, tasty Nigerian dishmade by cooking yam in flavourful spicy sauce. It's a nutritious, warm and, comforting meal that settles the soul.</p>
-    </header>
+<header class="header">
+    <h2><u>Tasty Yam Porridge Recipe</u></h2>
+    <p><strong>Yam porridge</strong> also called <em>Asaro</em> is a delicious, tasty Nigerian dish made by cooking yam in flavourful spicy sauce. It's a nutritious, warm and, comforting meal that settles the soul.</p> 
+</header>
+<!--Grid Layout-->
+<main class=" grid layout">
     <!--========Recipe Details========-->
-    <section>
-        <h3>Recipe Details</h3>
+    <section class="details card">
+        <h3><u>Recipe Details</u></h3>
         <ul>
             <li><strong>Prep time:</strong> 15 minutes</li>
             <li><strong>Cooking time:</strong> 45 minutes to an hour</li>
@@ -22,8 +25,8 @@
         </ul>
     </section>
 <!--========Ingredients Required========-->
-<section>
-    <h2>Ingredients</h2>
+<section class="ingredients card" >
+    <h2><u>Ingredients</u></h2>
     <ul>
         <li>1 tuber of yam peeled and cut (any shape desired)</li>
         <li>Half plate of blended pepper</li>
@@ -34,9 +37,11 @@
         <li>Titus fish (optional)</li>
         <li>Pomo (cow skin also optional)</li>
         <li>Ugwu or scent leaves</li>
-    </ul>
-</section>
-<h2>Instructions</h2>
+    </ul> 
+    </section>
+    <!--Instructions-->
+  <section class="instructions card">
+<h2><u>Instructions</u></h2>
 <ol>
     <li>Peel and cut the yaminto medium sized cubes depending on shape choosen.</li>
     <li>Wash and pour the yam into a pot and add water.</li>
@@ -49,15 +54,17 @@
 </ol>
 </section>
 <!--========Image========-->
-<img src="assets/porridge.jpg" alt="A plate of yam porridge with peppered beef on it" width="700"  height="500">
+<section class="image-section card">
+<img src="./assets/porridge.jpg" alt="A plate of yam porridge with peppered beef on it" width="700"  height="500">
+</section>
 <!--========Optional Tips========-->
-<section>
-    <h2>Tips</h2>
+<section class="tips card">
+    <h2><u>Tips</u></h2>
     <p>You can add any other smoked or dry fish for enhanced flavour </p>
 </section>
 <!--======== Bonus: Nutritional Information-->
-<article>
-    <h2>Nutrition Facts per serving approximated</h2>
+<article class="article card">
+    <h2><u>Nutrition Facts per serving approximated</u></h2>
     <ul>
         <li>Carbohydrates: 40 grams</li>
         <li>Calories: 200</li>
@@ -65,11 +72,14 @@
         <li>Fat: 5 grams</li>
     </ul>
 </article>
+</main>
 <!--========Bonus: Recipe Source Link========-->
-<footer>
+<footer class="footer">
     <p>original inspiration from:
         <a href="https://www.nigerianfoodtv.com/how-to-cook-nigerian-yam-porridge-with/">Nigerian Food Tv.com</a>
     </p>
 </footer>
 </body>
 </html>
+
+
