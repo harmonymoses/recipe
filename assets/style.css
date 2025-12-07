@@ -37,6 +37,11 @@ body{
   box-shadow: 0 4px 10px rgba(0,0,0,0.2) ;
   border: 5px solid white;
 }
+.card:hover{
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
 /*section headers*/
 h2,h3{
   color: #472611;
