@@ -1,1 +1,0 @@
-This project is a beginner-friendly HTML and CSS project that showcases a delicious Nigerian dish: Yam Porridge (Asaro). The goal of this project is to practice linking CSS to HTML to create a visually appealing web page.

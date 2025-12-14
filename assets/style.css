@@ -1,69 +1,47 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 body{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #fcebd1;
-  margin: 0;
-  padding: 0 20px;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 30px;
 }
-/*Header*/
-.header{
+
+h1{
   text-align: center;
-  background-color: #ff8c42;
-  padding:20px;
-  border-radius: 10px;
-  margin: 20px 0;
 }
-.header, p{
-  font-size: 20px;
-}
-/*grid layout*/
-.grid-layout{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap:30px;
-  margin-bottom: 30px;
-}
-/*card style*/
-.card{
-  background: rgb(246, 174, 80);
-  padding: 25px;
-  border-radius: 10px;
-  margin: 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2) ;
-  border: 5px solid white;
-}
-.card:hover{
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-}
-/*section headers*/
-h2,h3{
-  color: #472611;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-.image-section, img{
-  width: 100%;
- max-width: 350px;
-  border-radius: 10px;
-  display: grid;
-  margin: 0 auto;
-}
-/*list styling*/
-ul, ol{
-  padding-right: 20px;
-}
-/*footer*/
-.footer{
-  text-align: center;
-  background-color: rgb(235, 131, 46);
+
+form{
+  background-color: white;
   padding: 20px;
-  margin-top: 20px;
+  max-width: 400px;
+  margin: auto;
   border-radius: 5px;
+}
+
+label{
+  display: block;
+  margin-top: 10px;
+}
+
+input{
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button{
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #0056b3;
+}
+
+#message{
+  margin-top: 15px;
+  font-weight: bold;
 }
