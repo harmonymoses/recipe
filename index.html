@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration Form</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>StudentsGradeTracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>User Registration Form</h1>
-<form id="registerForm">
-    <label for="fullname">Full Name</label>
-    <input type="text" id="fullname" required>
+<h1>Student Grade Tracker</h1>
 
-    <label for="email">Email</label>
-    <input type="text" id="email" required>
+<div class="form">
+<input type="text" id="studentName" placeholder="Student Name">
+<input type="number" id="studentGrade" placeholder="Grade (0-100)" min="0" max="100">
+<button id="addStudent">Add Student</button>
+</div>
 
-    <label for="password">Password</label>
-    <input type="password" id="password" required>
+<p id="error"></p>
 
-    <label for="confirmPassword">Confirm Password</label>
-    <input type="password" id="confirmPassword" required>
+<!-- Table to display student information -->
+<table id="studentsTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Actions</th>  
+        </tr>
+    </thead>
+    <tbody id="studentList"></tbody>
+</table>
 
-    <label for="age">Age</label>
-    <input type="number" id="age" required>
-
-    <button type="submit">Register</button>
-
-    <p id="message"></p>
-
-</form>
+<!--Average grade-->
+<h2>Average Grade: <span id="average">0</span></h2>
 
 <script src="script.js"></script>
 </body>
