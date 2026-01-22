@@ -1,33 +1,214 @@
-body{
-  font-family: arial, sans-serif;
-  padding: 20px;
+/* General page styling */
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-h1{
-  margin-bottom: 10px;
-  color: #333;
+/* Main calculator container */
+.calculator {
+    background: #2b2d3a;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.form input, .form button {
-  padding: 10px;
-  margin-bottom: 5px;
+/* Display screen styling */
+#display {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background: #4a5270;
+    color: white;
+    font-size: 28px;
+    text-align: right;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-weight: 500;
 }
 
-table {
-  margin-top: 10px;
-  border-collapse: collapse;
- }
+#display::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
 
- th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
-  }
+/* Button container - creates a 4 column grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
 
-  .above-average {
-    background-color: lightgreen;
-  }
+/* Default button styling */
+button {
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    background: #3d4050;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-  #error {
-    color: red;
-  }
+/* Button hover effect */
+button:hover {
+    background: #4a4d5e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button press effect */
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Orange operator buttons (+, -, ×, ÷) */
+.operator-btn {
+    background: #ff9f0a;
+    color: white;
+}
+
+.operator-btn:hover {
+    background: #ffb340;
+}
+
+/* Light gray equals button */
+.equals-btn {
+    background: #d1d1d6;
+    color: #2b2d3a;
+}
+
+.equals-btn:hover {
+    background: #e0e0e5;
+}
+
+/* Light gray clear button */
+.clear-btn {
+    background: #d1d1d6;
+    color: #2b2d3a;
+}
+
+.clear-btn:hover {
+    background: #e0e0e5;
+}
+
+/* Backspace button styling */
+.backspace-btn {
+    background: #5a5d70;
+}
+
+.backspace-btn:hover {
+    background: #6a6d80;
+}
+
+/* Make button span 2 columns (for C and = buttons) */
+.span-2 {
+    grid-column: span 2;
+    border-radius: 30px;
+}
+
+/* History section styling */
+.history {
+    margin-top: 20px;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* History header */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.history h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Clear history link */
+#clearHistoryLink {
+    color: #ff9f0a;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+}
+
+#clearHistoryLink:hover {
+    text-decoration: underline;
+}
+
+/* History list styling */
+.history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual history item */
+.history li {
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid #333;
+    color: #ddd;
+}
+
+.history li:last-child {
+    border-bottom: none;
+}
+
+/* Mobile responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    #display {
+        height: 55px;
+        font-size: 24px;
+    }
+}
+
+/* Custom scrollbar for history section */
+.history::-webkit-scrollbar {
+    width: 6px;
+}
+
+.history::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+.history::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.history::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}

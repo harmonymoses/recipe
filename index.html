@@ -3,35 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentsGradeTracker</title>
+    <title>Simple Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Student Grade Tracker</h1>
 
-<div class="form">
-<input type="text" id="studentName" placeholder="Student Name">
-<input type="number" id="studentGrade" placeholder="Grade (0-100)" min="0" max="100">
-<button id="addStudent">Add Student</button>
+<div class="calculator">
+    <!-- Display screen -->
+    <input type="text" id="display" readonly>
+    
+    <!-- Calculator buttons -->
+    <div class="buttons">
+        <!-- First row: 1 2 3 + -->
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+
+        <!-- Second row: 4 5 6 - -->
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')" class="operator-btn">−</button>
+
+        <!-- Third row: 7 8 9 × -->
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')" class="operator-btn">×</button>
+
+        <!-- Fourth row: . 0 ← ÷ -->
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="deleteLastCharacter()" class="backspace-btn">⌫</button>
+        <button onclick="appendToDisplay('/')" class="operator-btn">÷</button>
+
+        <!-- Fifth row: Clear and Equals buttons (wider) -->
+        <button onclick="clearDisplay()" class="clear-btn span-2">C</button>
+        <button onclick="calculateResult()" class="equals-btn span-2">=</button>
+    </div>
+
+    <!-- History section to show previous calculations -->
+    <div class="history">
+        <div class="history-header">
+            <h3>History</h3>
+            <a href="#" id="clearHistoryLink" onclick="clearHistory(); return false;">Clear</a>
+        </div>
+        <ul id="historyList"></ul>
+    </div>
 </div>
-
-<p id="error"></p>
-
-<!-- Table to display student information -->
-<table id="studentsTable">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Grade</th>
-            <th>Actions</th>  
-        </tr>
-    </thead>
-    <tbody id="studentList"></tbody>
-</table>
-
-<!--Average grade-->
-<h2>Average Grade: <span id="average">0</span></h2>
 
 <script src="script.js"></script>
 </body>
 </html>
+
