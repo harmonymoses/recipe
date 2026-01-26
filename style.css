@@ -27,7 +27,7 @@ body {
     border: none;
     border-radius: 12px;
     margin-bottom: 20px;
-    background: #4a5270;
+    background: #2c2f6c;
     color: white;
     font-size: 28px;
     text-align: right;
@@ -36,11 +36,7 @@ body {
     font-weight: 500;
 }
 
-#display::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* Button container - creates a 4 column grid */
+/* Button container to create a 4 column grid */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -51,7 +47,7 @@ body {
 button {
     height: 55px;
     border: none;
-    border-radius: 50%;
+    border-radius: 50px;
     font-size: 20px;
     font-weight: 600;
     background: #3d4050;
